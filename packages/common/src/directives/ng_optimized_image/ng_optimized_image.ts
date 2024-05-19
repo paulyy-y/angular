@@ -388,8 +388,6 @@ export class NgOptimizedImage implements OnInit, OnChanges, OnDestroy {
       if (this.ngSrcset) {
         assertNoConflictingSrcset(this);
       }
-      assertNotBase64Image(this);
-      assertNotBlobUrl(this);
       if (this.fill) {
         assertEmptyWidthAndHeight(this);
         // This leaves the Angular zone to avoid triggering unnecessary change detection cycles when
